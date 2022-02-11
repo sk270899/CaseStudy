@@ -152,6 +152,27 @@ public class Client {
 
 
 
+//-------------------------------------OUTPUT------------------------------------
+
+//book 1 author : Rudyard Kipling
+//Item [uniqueIdentificationNumber=111, title=jungle book, noOfCopies=1000]
+//-------------------------------------------------------------------------------
+//journel 1 author : Ravish Kumar
+//year of publication : 1999
+//Item [uniqueIdentificationNumber=121, title=danik bhaskar, noOfCopies=100]
+//-------------------------------------------------------------------------------
+//Director of video 1 : Tseries
+//genre of videorock
+//year of release of video : 2010
+//Runtime : 3
+//Item [uniqueIdentificationNumber=131, title=its a song, noOfCopies=1]
+//-------------------------------------------------------------------------------
+//Artist of CD 1 : CD artist
+//genre name : CD genre
+//Runtime : 10
+//Item [uniqueIdentificationNumber=141, title=CD Title, noOfCopies=18]
+
+
 
 
 
