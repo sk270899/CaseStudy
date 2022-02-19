@@ -189,3 +189,191 @@ public class Product {
 	}
 
 }
+
+
+
+//---------------------OUTPUT-----------------------
+
+/*
+
+What you want to do ??
+Enter 1 to continue : 
+1
+1. Add Product
+2. Update Product
+3. Delete Product
+4. Get Product
+5. Get All Product
+Enter numeric value : 
+1
+Enter details : 
+Enter the id of product : 
+10
+Enter product name : 
+laptop
+Enter ammount of product : 
+59999
+Enter product code : 
+1902
+Enter address : 
+chennai
+Enter pin code : 
+325121
+Product added Successfully...
+Enter 1 to continue : 
+1
+1. Add Product
+2. Update Product
+3. Delete Product
+4. Get Product
+5. Get All Product
+Enter numeric value : 
+1
+Enter details : 
+Enter the id of product : 
+11
+Enter product name : 
+charger
+Enter ammount of product : 
+999
+Enter product code : 
+9451
+Enter address : 
+jaipur
+Enter pin code : 
+302017
+Product added Successfully...
+Enter 1 to continue : 
+1
+1. Add Product
+2. Update Product
+3. Delete Product
+4. Get Product
+5. Get All Product
+Enter numeric value : 
+1
+Enter details : 
+Enter the id of product : 
+12
+Enter product name : 
+smartphomme
+Enter ammount of product : 
+19990
+Enter product code : 
+4512
+Enter address : 
+bangalore
+Enter pin code : 
+910911
+Product added Successfully...
+Enter 1 to continue : 
+1
+1. Add Product
+2. Update Product
+3. Delete Product
+4. Get Product
+5. Get All Product
+Enter numeric value : 
+2
+Enter Product id to update : 
+12
+what you want to update in smartphomme ??
+1. Update name
+2. Update ammount
+3. Update Product code
+4. Update address
+5. Update pincode
+You can't change product id.
+Enter numeric input : 
+1
+Enter new name for product : 
+smartphone
+Updated new name to smartphone
+Product updated successfully...
+Enter 1 to continue : 
+1
+1. Add Product
+2. Update Product
+3. Delete Product
+4. Get Product
+5. Get All Product
+Enter numeric value : 
+4
+Enter Product id to get Product : 
+12
+Product [id=12, name=smartphone, ammount=19990, code=4512, address=bangalore, pincode=910911]
+Enter 1 to continue : 
+1
+1. Add Product
+2. Update Product
+3. Delete Product
+4. Get Product
+5. Get All Product
+Enter numeric value : 
+5
+Product [id=10, name=laptop, ammount=59999, code=1902, address=chennai, pincode=325121]
+Product [id=11, name=charger, ammount=999, code=9451, address=jaipur, pincode=302017]
+Product [id=12, name=smartphone, ammount=19990, code=4512, address=bangalore, pincode=910911]
+Enter 1 to continue : 
+1
+1. Add Product
+2. Update Product
+3. Delete Product
+4. Get Product
+5. Get All Product
+Enter numeric value : 
+3
+Enter Product id to delete : 
+12
+Product deleted successfully...
+Enter 1 to continue : 
+1
+1. Add Product
+2. Update Product
+3. Delete Product
+4. Get Product
+5. Get All Product
+Enter numeric value : 
+5
+Product [id=10, name=laptop, ammount=59999, code=1902, address=chennai, pincode=325121]
+Product [id=11, name=charger, ammount=999, code=9451, address=jaipur, pincode=302017]
+Enter 1 to continue : 
+1
+1. Add Product
+2. Update Product
+3. Delete Product
+4. Get Product
+5. Get All Product
+Enter numeric value : 
+1
+Enter details : 
+Enter the id of product : 
+12
+Enter product name : 
+smartphone
+Enter ammount of product : 
+19990
+Enter product code : 
+4516
+Enter address : 
+bangalore
+Enter pin code : 
+990911
+Product added Successfully...
+Enter 1 to continue : 
+1
+1. Add Product
+2. Update Product
+3. Delete Product
+4. Get Product
+5. Get All Product
+Enter numeric value : 
+5
+Product [id=10, name=laptop, ammount=59999, code=1902, address=chennai, pincode=325121]
+Product [id=11, name=charger, ammount=999, code=9451, address=jaipur, pincode=302017]
+Product [id=12, name=smartphone, ammount=19990, code=4516, address=bangalore, pincode=990911]
+Enter 1 to continue : 
+0
+
+
+ */
