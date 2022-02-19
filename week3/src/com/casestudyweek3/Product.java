@@ -57,7 +57,7 @@ public class Product {
 		switch (update) {
 		case 1: {
 			System.out.println("Enter new name for product : ");
-			myProduct.name = sc.nextLine();
+			myProduct.name = sc.next();
 			System.out.println("Updated new name to " + myProduct.name);
 			break;
 		}
@@ -75,7 +75,7 @@ public class Product {
 		}
 		case 4: {
 			System.out.println("Enter new address for product : ");
-			myProduct.address = sc.nextLine();
+			myProduct.address = sc.next();
 			System.out.println("Updated new address to " + myProduct.address);
 			break;
 		}
