@@ -33,7 +33,7 @@ public class BookDAO {
 		}
 	}
 
-	// get bookDetails method from DB
+	// get bookDetails by Id from DB
 
 	public ArrayList<String> getBookDetailsById(int BookId) throws Exception {
 		Class.forName("org.postgresql.Driver");

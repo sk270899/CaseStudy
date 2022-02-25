@@ -1,12 +1,26 @@
 ------------Eclipse Console Output----------------
 
+Enter numeric input : 
+1. Add book
+2. Display book
+1
 Enter Book proId
 123
-Enter Book Titile
+Enter Book Title
 java
 Enter Book price
 700
-inserted 1 record : Success
+inserted 1 record : Success\
+Enter 1 to continue or 0 to abort...
+---------------------------------------------------
+Enter numeric input : 
+1. Add book
+2. Display book
+2
+Enter book id to find book : 
+121
+[SHERLOCK, 100]
+Enter 1 to continue or 0 to abort...
 
 -----------SQL Shell Output-----------------------
 

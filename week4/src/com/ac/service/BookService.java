@@ -1,5 +1,7 @@
 package com.ac.service;
 
+import java.util.ArrayList;
+
 import com.ac.DAO.BookDAO;
 import com.ac.bean.Book;
 
@@ -37,4 +39,16 @@ public class BookService {
 			return 0;
 		}
 	}
+
+	public ArrayList<String> getBookDetailsById(int bookId) {
+		BookDAO getBook = new BookDAO();
+		ArrayList<String> book = new ArrayList<>();
+		try {
+			book = getBook.getBookDetailsById(bookId);
+		} catch (Exception e) {
+			System.out.println(e.toString());
+		}
+		return book;
+	}
+
 }
