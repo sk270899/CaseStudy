@@ -1,0 +1,64 @@
+------------Eclipse Console Output----------------
+
+Enter Book proId
+123
+Enter Book Titile
+java
+Enter Book price
+700
+inserted 1 record : Success
+
+-----------SQL Shell Output-----------------------
+
+postgres=# \l
+                                                 List of databases
+   Name    |  Owner   | Encoding |          Collate           |           Ctype            |   Access privileges
+-----------+----------+----------+----------------------------+----------------------------+-----------------------
+ postgres  | postgres | UTF8     | English_United States.1252 | English_United States.1252 |
+ student   | postgres | UTF8     | English_United States.1252 | English_United States.1252 |
+ template0 | postgres | UTF8     | English_United States.1252 | English_United States.1252 | =c/postgres          +
+           |          |          |                            |                            | postgres=CTc/postgres
+ template1 | postgres | UTF8     | English_United States.1252 | English_United States.1252 | =c/postgres          +
+           |          |          |                            |                            | postgres=CTc/postgres
+(4 rows)
+
+
+postgres=# \c student
+You are now connected to database "student" as user "postgres".
+student=# \d
+          List of relations
+ Schema |   Name   | Type  |  Owner
+--------+----------+-------+----------
+ public | bonus    | table | postgres
+ public | dept     | table | postgres
+ public | dummy    | table | postgres
+ public | emp      | table | postgres
+ public | facebook | table | postgres
+ public | salgrade | table | postgres
+(6 rows)
+
+
+student=# CREATE TABLE book(bookId int, bookTitle VARCHAR(50), bookPrice real, bookGrade VARCHAR(2));
+CREATE TABLE
+student=# SELECT * FROM book;
+ bookid | booktitle | bookprice | bookgrade
+--------+-----------+-----------+-----------
+    121 | SHERLOCK  |       100 | C
+(1 row)
+
+
+student=# SELECT * FROM book;
+ bookid | booktitle  | bookprice | bookgrade
+--------+------------+-----------+-----------
+    121 | SHERLOCK   |       100 | C
+    122 | Psychology |       900 | A
+(2 rows)
+
+
+student=# SELECT * FROM book;
+ bookid | booktitle  | bookprice | bookgrade
+--------+------------+-----------+-----------
+    121 | SHERLOCK   |       100 | C
+    122 | Psychology |       900 | A
+    123 | java       |       700 | A
+(3 rows)
