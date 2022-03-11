@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/sahil.khandelwal/Downloads/Hibernate JARs/antlr-2.7.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sahil.khandelwal/Downloads/Hibernate JARs/asm-3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sahil.khandelwal/Downloads/Hibernate JARs/cglib-2.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sahil.khandelwal/Downloads/Hibernate JARs/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sahil.khandelwal/Downloads/Hibernate JARs/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sahil.khandelwal/Downloads/Hibernate JARs/hibernate-commons-annotations-3.2.0.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sahil.khandelwal/Downloads/Hibernate JARs/hibernate-core-3.6.10.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sahil.khandelwal/Downloads/Hibernate JARs/hibernate-entitymanager-3.6.10.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sahil.khandelwal/Downloads/Hibernate JARs/hibernate-jpa-2.0-api-1.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sahil.khandelwal/Downloads/Hibernate JARs/javassist-3.12.0.GA.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sahil.khandelwal/Downloads/Hibernate JARs/jta-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sahil.khandelwal/Downloads/Hibernate JARs/postgresql-42.2.20.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sahil.khandelwal/Downloads/Hibernate JARs/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
