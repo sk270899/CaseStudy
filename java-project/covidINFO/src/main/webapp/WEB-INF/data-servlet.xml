@@ -15,17 +15,9 @@
 
     <!-- Provide support for component scanning -->  
     <ctx:annotation-config></ctx:annotation-config>
-    <!-- <context:component-scan base-package=""></context:component-scan> --> 
+    <context:component-scan base-package="controller"></context:component-scan>
   
     <!--Provide support for conversion, formatting and validation -->  
-    <!-- <mvc:annotation-driven/> -->  
-    
-    <bean
-    class="org.springframework.web.servlet.view.InternalViewResolver"
-    name="viewResolver">
-    
-    <property name="prefix" value="/"/>
-    <property name="suffix" value=".jsp"/>
-    </bean>
+    <mvc:annotation-driven/>  
   
 </beans>
