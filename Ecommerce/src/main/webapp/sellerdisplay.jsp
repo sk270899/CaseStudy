@@ -116,6 +116,13 @@ h1 {productshow
 </tr>
 <tr>
 <td>
+<form action="/add">
+<button type="submit" class="button-38">Add Product</button>
+</form>
+</td>
+</tr>
+<tr>
+<td>
 <form action="/sellerproductshow">
 <button type="submit" class="button-38">View Products</button>
 </form>
@@ -123,8 +130,8 @@ h1 {productshow
 </tr>
 <tr>
 <td>
-<form action="/add">
-<button type="submit" class="button-38">Add Product</button>
+<form action="/update">
+<button type="submit" class="button-38">Update Product</button>
 </form>
 </td>
 </tr>

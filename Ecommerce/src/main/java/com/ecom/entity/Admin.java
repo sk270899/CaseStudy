@@ -10,7 +10,7 @@ public class Admin {
 	@Id //sets a column as primary key 
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // automatically generates value for Id
 	private int Aid;
-	private String Aname;
+	private String Aname;	
 	private String Aaddress;
 	private String Aemail;
 	private long Ano;

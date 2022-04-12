@@ -160,7 +160,7 @@ while(resultSet.next()){
 <td><%=resultSet.getString("Pcategory") %></td>
 
 <td>
-<form action="purchaseproduct.jsp" method="post">
+<form action="/placeorder" method="post">
 <label>Place Order for product : </label>
 <input type="submit" name="Pid" class="button-38"value="<%=resultSet.getString("Pid")%>">
 </form>

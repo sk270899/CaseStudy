@@ -12,6 +12,9 @@ text-align: center;
 </style>
 </head>
 <body>
-<h1>Thank-you for placing order !!</h1>
+<h1>Order Placed !!</h1>
+<%
+System.out.println("order placed");
+%>
 </body>
 </html>
