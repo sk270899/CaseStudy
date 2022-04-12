@@ -38,7 +38,7 @@ public class CustomerController {
 	// yes changes
 	@RequestMapping("/customeradd")
 	public String addingCustomer(Customer c) throws ClassNotFoundException, SQLException {
-
+		String Cpassword = c.getCpassword();
 		String Cemail = c.getCemail();
 		try {
 			Class.forName(driverName);
@@ -52,8 +52,14 @@ public class CustomerController {
 		resultSet = statement.executeQuery("select * from Customer where Cemail=" + "'" + Cemail + "'");
 		resultSet.last();
 		// System.out.println(resultSet.getRow());
-		if (resultSet.getRow() > 0) {
-			System.out.println(Cemail + "--> e-mail already exists");
+		if (resultSet.getRow() > 0 || Cpassword.length()<8) {
+			if(resultSet.getRow() > 0) {
+				System.out.println(Cemail + "--> e-mail already exists");
+				return "customeradd.jsp";
+			} else if(Cpassword.length()<8) {
+				System.out.println("--> password must be 8 characters");
+				return "customeradd.jsp";
+			}
 			return "customeradd.jsp";
 			// emailalredyexists.jsp
 		} else {

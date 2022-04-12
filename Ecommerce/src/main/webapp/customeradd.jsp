@@ -109,7 +109,7 @@ font-weight: 200;
 <span class="required">Enter customer Email:</span>
 <input type="email" name="Cemail" placeholder="example@abc.com" required="required" oninvalid="this.setCustomValidity('Please Enter Valid Email as abc@example.com')" oninput="this.setCustomValidity('')"><br>
 <span class="required">Enter customer Password:</span>
-<input type="password" name="Cpassword" placeholder="Enter Strong Password" required="required" oninvalid="this.setCustomValidity('Please Enter Password')" oninput="this.setCustomValidity('')"><br>
+<input type="password" name="Cpassword" placeholder="Password must be 8 characters" required="required" oninvalid="this.setCustomValidity('Please Enter Password')" oninput="this.setCustomValidity('')"><br>
 <span>Enter customer Phone Number:</span>
 <input type="number" name="Cno" placeholder="Enter Phone Number"><br>
 <input type="submit" value="Submit">

@@ -31,6 +31,7 @@ public class SellerController {
 	
 	@RequestMapping("/addingSeller")
 	public String addingSeller(Seller s) throws ClassNotFoundException, SQLException {	
+		String Spassword = s.getSpassword();
 		String Semail = s.getSemail();
 		try {
 			Class.forName(driverName);
@@ -44,8 +45,14 @@ public class SellerController {
 		resultSet = statement.executeQuery("select * from Seller where Semail=" + "'" + Semail + "'");
 		resultSet.last();
 		// System.out.println(resultSet.getRow());
-		if (resultSet.getRow() > 0) {
-			System.out.println(Semail + "--> e-mail already exists");
+		if (resultSet.getRow() > 0 || Spassword.length()<8) {
+			if(resultSet.getRow() > 0) {
+				System.out.println(Semail + "--> e-mail already exists");
+				return "selleradd.jsp";
+			} else if(Spassword.length()<8) {
+				System.out.println("--> password must be 8 characters");
+				return "selleradd.jsp";
+			}
 			return "selleradd.jsp";
 			// emailalredyexists.jsp
 		} else {

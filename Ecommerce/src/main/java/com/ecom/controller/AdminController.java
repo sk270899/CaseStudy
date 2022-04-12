@@ -29,6 +29,7 @@ public class AdminController {
 	
 	@RequestMapping("/addingAdmin")
 	public String addingAdmin(Admin a) throws ClassNotFoundException, SQLException {
+		String Apassword = a.getApassword();
 		String Aemail = a.getAemail();
 		try {
 			Class.forName(driverName);
@@ -41,8 +42,14 @@ public class AdminController {
 		// System.out.println(name);
 		resultSet = statement.executeQuery("select * from Admin where Aemail=" + "'" + Aemail + "'");
 		resultSet.last();
-		if (resultSet.getRow() > 0) {
-			System.out.println(Aemail + "--> e-mail already exists");
+		if (resultSet.getRow() > 0 || Apassword.length()<8) {
+			if(resultSet.getRow() > 0) {
+				System.out.println(Aemail + "--> e-mail already exists");
+				return "adminadd.jsp";
+			} else if(Apassword.length()<8) {
+				System.out.println("--> password must be 8 characters");
+				return "adminadd.jsp";
+			}
 			return "adminadd.jsp";
 			// emailalredyexists.jsp
 		} else {
