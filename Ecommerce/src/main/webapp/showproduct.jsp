@@ -177,6 +177,10 @@ e.printStackTrace();
 %>
 </table>
 <br><br><br>
+<form action="placeorder.jsp" style="text-align: center;">
+<button type="submit" class="button-39">View Cart</button>
+</form>
+<br><br><br>
 <form action="/customer" style="text-align: center;">
 <button type="submit" class="button-39">Logout</button>
 </form>

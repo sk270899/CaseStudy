@@ -61,7 +61,7 @@ ResultSet resultSet = null;
 <tr>
 <th><b>Product Id</b></th>
 <th><b>Product Name</b></th>
-<th><b>Product Product</b></th>
+<th><b>Product Price</b></th>
 <th><b>Product Category</b></th>
 </tr>
 <%
