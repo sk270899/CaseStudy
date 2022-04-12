@@ -58,7 +58,7 @@ public class CustomerController {
 			// emailalredyexists.jsp
 		} else {
 			customerDao.save(c);
-			return "customerdisplay.jsp";
+			return "customerSignIn.jsp";
 		}
 	}
 

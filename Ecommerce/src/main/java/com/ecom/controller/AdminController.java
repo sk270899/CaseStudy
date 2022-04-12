@@ -1,5 +1,11 @@
 package com.ecom.controller;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,10 +18,37 @@ public class AdminController {
 	@Autowired
 	AdminDao admindao;
 	
+	String driverName = "org.postgresql.Driver";
+	String connectionUrl = "jdbc:postgresql://localhost/";
+	String dbName = "student";
+	String userId = "postgres";
+	String password = "postgres";
+	Connection connection = null;
+	Statement statement = null;
+	ResultSet resultSet = null;
+	
 	@RequestMapping("/addingAdmin")
-	public String addingAdmin(Admin a) {	
-		admindao.save(a);
-		return "adminSignIn.jsp";
+	public String addingAdmin(Admin a) throws ClassNotFoundException, SQLException {
+		String Aemail = a.getAemail();
+		try {
+			Class.forName(driverName);
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		Class.forName("org.postgresql.Driver");
+		connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
+		statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+		// System.out.println(name);
+		resultSet = statement.executeQuery("select * from Admin where Aemail=" + "'" + Aemail + "'");
+		resultSet.last();
+		if (resultSet.getRow() > 0) {
+			System.out.println(Aemail + "--> e-mail already exists");
+			return "adminadd.jsp";
+			// emailalredyexists.jsp
+		} else {
+			admindao.save(a);
+			return "adminSignIn.jsp";
+		}
 	}
 	
 	@RequestMapping("/admin")

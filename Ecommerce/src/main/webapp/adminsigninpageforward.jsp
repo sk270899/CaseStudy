@@ -39,24 +39,24 @@ Connection connection = null;
 Statement statement = null;
 ResultSet resultSet = null;
 
-String Aid = request.getParameter("Aid");
+//String Aid = request.getParameter("Aid");
 System.out.println("<<<<<<<<<<<<<<<<<<<<<<<<<<<<=====================<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
-System.out.println("++++++++++++++"+Aid);
+//System.out.println("++++++++++++++"+Aid);
 String Aemail = request.getParameter("Aemail");
 
 String Apassword = request.getParameter("Apassword");
-System.out.println(Aemail);
-System.out.println(Apassword);
+System.out.println("email = " + Aemail);
+System.out.println("password = " + Apassword);
 Class.forName("org.postgresql.Driver");
 connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
 statement = connection.createStatement();
-resultSet = statement.executeQuery("select * from admin where Aid=" + Aid);
+resultSet = statement.executeQuery("select * from Admin where Aemail=" + "'" + Aemail + "'");
 try {
 	resultSet.next();
 	if (resultSet.getString("Apassword").equals(Apassword) && resultSet.getString("Aemail").equals(Aemail)) {
 		out.println("Welcome " + Aemail);
 	} else {
-		System.out.println("Invalid Cpassword or username.");
+		System.out.println("Invalid email or password");
 		response.sendRedirect("adminSignIn.jsp");
 	}
 } catch (Exception e) {

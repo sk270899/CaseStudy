@@ -10,9 +10,9 @@ public class Admin {
 	private String Aname;
 	private String Aaddress;
 	private String Aemail;
-	private int Ano;
+	private long Ano;
 	private String Apassword;
-	public Admin(int aid, String aname, String aaddress, String aemail, int ano, String apassword) {
+	public Admin(int aid, String aname, String aaddress, String aemail, long ano, String apassword) {
 		super();
 		Aid = aid;
 		Aname = aname;
@@ -45,10 +45,10 @@ public class Admin {
 	public void setAemail(String aemail) {
 		this.Aemail = aemail;
 	}
-	public int getAno() {
+	public long getAno() {
 		return Ano;
 	}
-	public void setAno(int ano) {
+	public void setAno(long ano) {
 		this.Ano = ano;
 	}
 	

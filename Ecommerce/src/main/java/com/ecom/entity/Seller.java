@@ -10,7 +10,7 @@ public class Seller {
 	private String Sname;
 	private String Saddress;
 	private String Semail;
-	private int Sno;
+	private long Sno;
 	private String Spassword;
 	public String getSpassword() {
 		return Spassword;
@@ -42,15 +42,15 @@ public class Seller {
 	public void setSemail(String semail) {
 		this.Semail = semail;
 	}
-	public int getSno() {
+	public long getSno() {
 		return Sno;
 	}
-	public void setSno(int sno) {
+	public void setSno(long sno) {
 		this.Sno = sno;
 	}
 	
 	
-	public Seller(int sid, String sname, String saddress, String semail, int sno, String spassword) {
+	public Seller(int sid, String sname, String saddress, String semail, long sno, String spassword) {
 		super();
 		Sid = sid;
 		Sname = sname;

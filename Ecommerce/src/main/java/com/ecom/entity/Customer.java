@@ -10,7 +10,7 @@ public class Customer {
 	private String Cname;
 	private String Caddress;
 	private String Cemail;
-	private int Cno;
+	private long Cno;
 	private String Cpassword;
 	public String getCpassword() {
 		return Cpassword;
@@ -42,18 +42,18 @@ public class Customer {
 	public void setCemail(String cemail) {
 		this.Cemail = cemail;
 	}
-	public int getCno() {
+	public long getCno() {
 		return Cno;
 	}
-	public void setCno(int cno) {
-		this.Cno = cno;
+	public void setCno(long Cno) {
+		this.Cno = Cno;
 	}
 	@Override
 	public String toString() {
 		return "Customer [Cid=" + Cid + ", Cname=" + Cname + ", Caddress=" + Caddress + ", Cemail=" + Cemail + ", Cno="
 				+ Cno + ", Cpassword=" + Cpassword + "]";
 	}
-	public Customer(int cid, String cname, String caddress, String cemail, int cno, String cpassword) {
+	public Customer(int cid, String cname, String caddress, String cemail, long cno, String cpassword) {
 		super();
 		Cid = cid;
 		Cname = cname;
