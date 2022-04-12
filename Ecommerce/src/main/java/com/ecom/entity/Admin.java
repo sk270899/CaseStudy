@@ -5,25 +5,17 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity
+@Entity // Creates Table in DB with name same as class name
 public class Admin {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Id //sets a column as primary key 
+	@GeneratedValue(strategy = GenerationType.IDENTITY) // automatically generates value for Id
 	private int Aid;
 	private String Aname;
 	private String Aaddress;
 	private String Aemail;
 	private long Ano;
 	private String Apassword;
-	public Admin(int aid, String aname, String aaddress, String aemail, long ano, String apassword) {
-		super();
-		Aid = aid;
-		Aname = aname;
-		Aaddress = aaddress;
-		Aemail = aemail;
-		Ano = ano;
-		Apassword = apassword;
-	}
+	
 	public int getAid() {
 		return Aid;
 	}
@@ -61,14 +53,16 @@ public class Admin {
 	public void setApassword(String apassword) {
 		Apassword = apassword;
 	}
-	@Override
-	public String toString() {
-		return "Admin [Aid=" + Aid + ", Aname=" + Aname + ", Aaddress=" + Aaddress + ", Aemail=" + Aemail + ", Ano="
-				+ Ano + ", Apassword=" + Apassword + "]";
-	}
-	public Admin() {
-		// TODO Auto-generated constructor stub
-	}
+	
+	/*
+	 * @Override public String toString() { return "Admin [Aid=" + Aid + ", Aname="
+	 * + Aname + ", Aaddress=" + Aaddress + ", Aemail=" + Aemail + ", Ano=" + Ano +
+	 * ", Apassword=" + Apassword + "]"; } public Admin(int aid, String aname,
+	 * String aaddress, String aemail, long ano, String apassword) { super(); Aid =
+	 * aid; Aname = aname; Aaddress = aaddress; Aemail = aemail; Ano = ano;
+	 * Apassword = apassword; }
+	 */
+	public Admin() {}
 	
 	
 }

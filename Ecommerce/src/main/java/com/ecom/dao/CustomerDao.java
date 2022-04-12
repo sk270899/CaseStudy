@@ -4,6 +4,4 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.ecom.entity.Customer;
 
-public interface CustomerDao extends CrudRepository<Customer, Integer> {
-
-}
+public interface CustomerDao extends CrudRepository<Customer, Integer> {}

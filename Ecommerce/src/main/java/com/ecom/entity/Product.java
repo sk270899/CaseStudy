@@ -38,21 +38,16 @@ public class Product {
 	public void setPcategory(String pcategory) {
 		this.Pcategory = pcategory;
 	}
-	@Override
-	public String toString() {
-		return "Product [Pid=" + Pid + ", Pname=" + Pname + ", Pprice=" + Pprice + ", Pcategory=" + Pcategory + "]";
-	}
+
+	/*
+	 * @Override public String toString() { return "Product [Pid=" + Pid +
+	 * ", Pname=" + Pname + ", Pprice=" + Pprice + ", Pcategory=" + Pcategory + "]";
+	 * } public Product(int pid, String pname, int pprice, String pcategory) {
+	 * super(); this.Pid = pid; this.Pname = pname; this.Pprice = pprice;
+	 * this.Pcategory = pcategory; }
+	 */
+	public Product() {}
 	
-	public Product() {
-		// TODO Auto-generated constructor stub
-	}
-	public Product(int pid, String pname, int pprice, String pcategory) {
-		super();
-		this.Pid = pid;
-		this.Pname = pname;
-		this.Pprice = pprice;
-		this.Pcategory = pcategory;
-	}
 	
 	
 }

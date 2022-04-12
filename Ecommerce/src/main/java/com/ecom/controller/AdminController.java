@@ -64,13 +64,12 @@ public class AdminController {
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
-		Class.forName("org.postgresql.Driver");
+		//Class.forName("org.postgresql.Driver");
 		connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
 		statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 		// System.out.println(name);
 		resultSet = statement.executeQuery("select * from Admin where Aemail=" + "'" + Aemail + "'");
 		resultSet.last();
-		if (resultSet.getRow() > 0 || !is_vaild_password(Apassword)) {
 			if(resultSet.getRow() > 0) {
 				System.out.println(Aemail + "--> e-mail already exists");
 				return "adminadd.jsp";
@@ -82,10 +81,7 @@ public class AdminController {
 						+ "Your password's length should be at least 8.\r\n"
 						+ "Your password should contain at least one digit.");
 				return "adminadd.jsp";
-			}
-			return "adminadd.jsp";
-			// emailalredyexists.jsp
-		} else {
+			} else {
 			adminService.addAdmin(a);
 			return "adminSignIn.jsp";
 		}

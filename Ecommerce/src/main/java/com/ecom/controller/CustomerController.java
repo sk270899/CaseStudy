@@ -32,31 +32,27 @@ public class CustomerController {
 	Statement statement = null;
 	ResultSet resultSet = null;
 
-	
 	public static boolean is_vaild_password(String password) {
-		 int n = password.length();
-	        boolean hasLower = false, hasUpper = false,
-	                hasDigit = false, specialChar = false;
-	        Set<Character> set = new HashSet<Character>(
-	            Arrays.asList('!', '@', '#', '$', '%', '^', '&',
-	                          '*', '(', ')', '-', '+'));
-	        for (char i : password.toCharArray())
-	        {
-	            if (Character.isLowerCase(i))
-	                hasLower = true;
-	            if (Character.isUpperCase(i))
-	                hasUpper = true;
-	            if (Character.isDigit(i))
-	                hasDigit = true;
-	            if (set.contains(i))
-	                specialChar = true;
-	        }
-	        if (hasDigit && hasLower && hasUpper && specialChar && (n >= 8))
-	        	return true;
-	        else
-	        	return false;
+		int n = password.length();
+		boolean hasLower = false, hasUpper = false, hasDigit = false, specialChar = false;
+		Set<Character> set = new HashSet<Character>(
+				Arrays.asList('!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '+'));
+		for (char i : password.toCharArray()) {
+			if (Character.isLowerCase(i))
+				hasLower = true;
+			if (Character.isUpperCase(i))
+				hasUpper = true;
+			if (Character.isDigit(i))
+				hasDigit = true;
+			if (set.contains(i))
+				specialChar = true;
+		}
+		if (hasDigit && hasLower && hasUpper && specialChar && (n >= 8))
+			return true;
+		else
+			return false;
 	}
-	
+
 	@RequestMapping("/deletingCustomer")
 	public String deletingCustomer(int id) {
 		customerService.deleteCustomer(id);
@@ -80,7 +76,6 @@ public class CustomerController {
 		resultSet = statement.executeQuery("select * from Customer where Cemail=" + "'" + Cemail + "'");
 		resultSet.last();
 		// System.out.println(resultSet.getRow());
-		if (resultSet.getRow() > 0 || !is_vaild_password(Cpassword)) {
 			if(resultSet.getRow() > 0) {
 				System.out.println(Cemail + "--> e-mail already exists");
 				return "customeradd.jsp";
@@ -93,14 +88,11 @@ public class CustomerController {
 						+ "Your password should contain at least one digit.");
 				return "customeradd.jsp";
 			}
-			return "customeradd.jsp";
-			// emailalredyexists.jsp
-		} else {
+		 else {
 			customerService.addCustomer(c);
 			return "customerSignIn.jsp";
 		}
 	}
-
 	/*
 	 * @RequestMapping("/updateCustomer") public String updateCustomer(Customer c)
 	 * throws ClassNotFoundException, SQLException { int Cid=c.getCid(); try {
@@ -181,14 +173,13 @@ public class CustomerController {
 		System.out.println(name);
 		resultSet = statement.executeQuery("select * from Product where Pname=" + "'" + name + "'");
 		resultSet.last();
-		System.out.println("row count ===== "+resultSet.getRow());
+		System.out.println("row count ===== " + resultSet.getRow());
 		if (resultSet.getRow() < 1) {
 			System.out.println(name + "--> product does not exists");
-			return "showproduct.jsp";
 		} else {
 			System.out.println(name + " exists");
-			return "showproduct.jsp";
 		}
+		return "showproduct.jsp";
 	}
 
 }

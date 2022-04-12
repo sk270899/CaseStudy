@@ -53,20 +53,15 @@ public class Seller {
 	}
 	
 	
-	public Seller(int sid, String sname, String saddress, String semail, long sno, String spassword) {
-		super();
-		Sid = sid;
-		Sname = sname;
-		Saddress = saddress;
-		Semail = semail;
-		Sno = sno;
-		Spassword = spassword;
-	}
-	@Override
-	public String toString() {
-		return "Seller [Sid=" + Sid + ", Sname=" + Sname + ", Saddress=" + Saddress + ", Semail=" + Semail + ", Sno="
-				+ Sno + ", Spassword=" + Spassword + "]";
-	}
+	
+	/*
+	 * @Override public String toString() { return "Seller [Sid=" + Sid + ", Sname="
+	 * + Sname + ", Saddress=" + Saddress + ", Semail=" + Semail + ", Sno=" + Sno +
+	 * ", Spassword=" + Spassword + "]"; } public Seller(int sid, String sname,
+	 * String saddress, String semail, long sno, String spassword) { super(); Sid =
+	 * sid; Sname = sname; Saddress = saddress; Semail = semail; Sno = sno;
+	 * Spassword = spassword; }
+	 */
 	public Seller() {
 		// TODO Auto-generated constructor stub
 	}

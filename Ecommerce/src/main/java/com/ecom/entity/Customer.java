@@ -51,23 +51,16 @@ public class Customer {
 	public void setCno(long Cno) {
 		this.Cno = Cno;
 	}
-	@Override
-	public String toString() {
-		return "Customer [Cid=" + Cid + ", Cname=" + Cname + ", Caddress=" + Caddress + ", Cemail=" + Cemail + ", Cno="
-				+ Cno + ", Cpassword=" + Cpassword + "]";
-	}
-	public Customer(int cid, String cname, String caddress, String cemail, long cno, String cpassword) {
-		super();
-		Cid = cid;
-		Cname = cname;
-		Caddress = caddress;
-		Cemail = cemail;
-		Cno = cno;
-		Cpassword = cpassword;
-	}
-	public Customer() {
-		// TODO Auto-generated constructor stub
-	}
+
+	/*
+	 * @Override public String toString() { return "Customer [Cid=" + Cid +
+	 * ", Cname=" + Cname + ", Caddress=" + Caddress + ", Cemail=" + Cemail +
+	 * ", Cno=" + Cno + ", Cpassword=" + Cpassword + "]"; } public Customer(int cid,
+	 * String cname, String caddress, String cemail, long cno, String cpassword) {
+	 * super(); Cid = cid; Cname = cname; Caddress = caddress; Cemail = cemail; Cno
+	 * = cno; Cpassword = cpassword; }
+	 */
+	public Customer() {}
 	
 	
 }

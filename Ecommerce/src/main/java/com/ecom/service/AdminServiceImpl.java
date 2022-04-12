@@ -8,8 +8,8 @@ import org.springframework.stereotype.Service;
 import com.ecom.dao.AdminDao;
 import com.ecom.entity.Admin;
 
-@Service
-@Transactional
+@Service // works same as component annotation
+@Transactional 
 public class AdminServiceImpl implements AdminService{
 	@Autowired
 	AdminDao adminDao;

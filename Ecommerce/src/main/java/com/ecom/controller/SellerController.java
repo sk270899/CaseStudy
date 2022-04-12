@@ -18,10 +18,10 @@ import com.ecom.service.SellerService;
 
 @Controller
 public class SellerController {
-	
+
 	@Autowired
 	SellerService sellerService;
-	
+
 	String driverName = "org.postgresql.Driver";
 	String connectionUrl = "jdbc:postgresql://localhost/";
 	String dbName = "student";
@@ -32,31 +32,28 @@ public class SellerController {
 	ResultSet resultSet = null;
 
 	public static boolean is_vaild_password(String password) {
-		 int n = password.length();
-	        boolean hasLower = false, hasUpper = false,
-	                hasDigit = false, specialChar = false;
-	        Set<Character> set = new HashSet<Character>(
-	            Arrays.asList('!', '@', '#', '$', '%', '^', '&',
-	                          '*', '(', ')', '-', '+'));
-	        for (char i : password.toCharArray())
-	        {
-	            if (Character.isLowerCase(i))
-	                hasLower = true;
-	            if (Character.isUpperCase(i))
-	                hasUpper = true;
-	            if (Character.isDigit(i))
-	                hasDigit = true;
-	            if (set.contains(i))
-	                specialChar = true;
-	        }
-	        if (hasDigit && hasLower && hasUpper && specialChar && (n >= 8))
-	        	return true;
-	        else
-	        	return false;
+		int n = password.length();
+		boolean hasLower = false, hasUpper = false, hasDigit = false, specialChar = false;
+		Set<Character> set = new HashSet<Character>(
+				Arrays.asList('!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '+'));
+		for (char i : password.toCharArray()) {
+			if (Character.isLowerCase(i))
+				hasLower = true;
+			if (Character.isUpperCase(i))
+				hasUpper = true;
+			if (Character.isDigit(i))
+				hasDigit = true;
+			if (set.contains(i))
+				specialChar = true;
+		}
+		if (hasDigit && hasLower && hasUpper && specialChar && (n >= 8))
+			return true;
+		else
+			return false;
 	}
-	
+
 	@RequestMapping("/addingSeller")
-	public String addingSeller(Seller s) throws ClassNotFoundException, SQLException {	
+	public String addingSeller(Seller s) throws ClassNotFoundException, SQLException {
 		String Spassword = s.getSpassword();
 		String Semail = s.getSemail();
 		try {
@@ -71,39 +68,35 @@ public class SellerController {
 		resultSet = statement.executeQuery("select * from Seller where Semail=" + "'" + Semail + "'");
 		resultSet.last();
 		// System.out.println(resultSet.getRow());
-		if (resultSet.getRow() > 0 || !is_vaild_password(Spassword)) {
-			if(resultSet.getRow() > 0) {
-				System.out.println(Semail + "--> e-mail already exists");
-				return "selleradd.jsp";
-			} else if(!is_vaild_password(Spassword)) {
-				System.out.println("Your Password is : " + Spassword);
-				System.out.println("Your password should contain at least one lowercase English character.\r\n"
-						+ "Your password should contain at least one uppercase English character.\r\n"
-						+ "Your password should contain at least one special character. The special characters are: !@#$%^&*()-+\r\n"
-						+ "Your password's length should be at least 8.\r\n"
-						+ "Your password should contain at least one digit.");
-				return "selleradd.jsp";
-			}
+		if (resultSet.getRow() > 0) {
+			System.out.println(Semail + "--> e-mail already exists");
 			return "selleradd.jsp";
-			// emailalredyexists.jsp
+		} else if (!is_vaild_password(Spassword)) {
+			System.out.println("Your Password is : " + Spassword);
+			System.out.println("Your password should contain at least one lowercase English character.\r\n"
+					+ "Your password should contain at least one uppercase English character.\r\n"
+					+ "Your password should contain at least one special character. The special characters are: !@#$%^&*()-+\r\n"
+					+ "Your password's length should be at least 8.\r\n"
+					+ "Your password should contain at least one digit.");
+			return "selleradd.jsp";
 		} else {
 			sellerService.addSeller(s);
 			return "sellersignin.jsp";
 		}
 	}
-	
+
 	@RequestMapping("/updatingSeller")
-	public String updatingSeller(Seller s) {	
+	public String updatingSeller(Seller s) {
 		sellerService.addSeller(s);
 		return "sellerdisplay.jsp";
 	}
-	
+
 	@RequestMapping("/deletingSeller")
-	public String deletingSeller(int id) {	
+	public String deletingSeller(int id) {
 		sellerService.deleteSeller(id);
 		return "admincontrol.jsp";
 	}
-	
+
 	@RequestMapping("/seller")
 	public String seller() {
 		return "sellerloginsignup.jsp";
