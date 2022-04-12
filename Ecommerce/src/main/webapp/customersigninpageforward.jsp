@@ -38,9 +38,9 @@ Statement statement = null;
 ResultSet resultSet = null;
 %>
 <%
-String Cid = request.getParameter("Cid");
+//String Cid = request.getParameter("Cid");
 System.out.println("<<<<<<<<<<<<<<<<<<<<<<<<<<<<=====================<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
-System.out.println(Cid);
+//System.out.println(Cid);
 String Cemail = request.getParameter("Cemail");
 /*session.putValue("Cemail", email);*/
 String Cpassword = request.getParameter("Cpassword");
@@ -49,7 +49,7 @@ System.out.println(Cpassword);
 Class.forName("org.postgresql.Driver");
 connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
 statement = connection.createStatement();
-resultSet = statement.executeQuery("select * from Customer where Cid=" + Cid);
+resultSet = statement.executeQuery("select * from Customer where Cemail=" + "'" + Cemail + "'");
 try {
 	resultSet.next();
 	if (resultSet.getString("cpassword").equals(Cpassword) && resultSet.getString("cemail").equals(Cemail)) {

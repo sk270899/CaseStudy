@@ -89,7 +89,7 @@ font-weight: 200;
 <h2>Enter Seller SignIN Details</h2>
 <p><span class="astric"> * </span>Marked fields are required</p>
 <form action="sellersigninpageforward.jsp" method="POST">
-	<span class="required">Enter Id:</span><input placeholder="Enter Id" type="number" name="Sid" required="required" oninvalid="this.setCustomValidity('Please Enter Valid Id')" oninput="this.setCustomValidity('')">
+	<!-- <span class="required">Enter Id:</span><input placeholder="Enter Id" type="number" name="Sid" required="required" oninvalid="this.setCustomValidity('Please Enter Valid Id')" oninput="this.setCustomValidity('')"> -->
 	<span class="required">Enter E-mail:</span><input type="email" placeholder="Enter Your Email" placeholder="example@abc.com" name="Semail" required="required" oninvalid="this.setCustomValidity('Please Enter Valid Email as abc@example.com')" oninput="this.setCustomValidity('')">
 	<span class="required">Enter Password:</span><input type="password" placeholder="Enter Your Password" name="Spassword" required="required" oninvalid="this.setCustomValidity('Please Enter Valid Password')" oninput="this.setCustomValidity('')">
 					<input type="submit" value="LogIn">

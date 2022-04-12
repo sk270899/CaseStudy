@@ -40,9 +40,9 @@ Statement statement = null;
 ResultSet resultSet = null;
 %>
 <%
-String Sid = request.getParameter("Sid");
+//String Sid = request.getParameter("Sid");
 System.out.println("<<<<<<<<<<<<<<<<<<<<<<<<<<<<=====================<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
-System.out.println("++++++++++++++"+Sid);
+//System.out.println("++++++++++++++"+Sid);
 String Semail = request.getParameter("Semail");
 
 String Spassword = request.getParameter("Spassword");
@@ -51,7 +51,7 @@ System.out.println(Spassword);
 Class.forName("org.postgresql.Driver");
 connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
 statement = connection.createStatement();
-resultSet = statement.executeQuery("select * from seller where Sid=" + Sid);
+resultSet = statement.executeQuery("select * from Seller where Semail=" + "'" + Semail + "'");
 try {
 	resultSet.next();
 	if (resultSet.getString("Spassword").equals(Spassword) && resultSet.getString("Semail").equals(Semail)) {

@@ -96,8 +96,8 @@ font-weight: 200;
 <h2>SignUp As Seller</h2>
 <p><span class="astric"> * </span>Marked fields are required</p>
 <form action="/addingSeller">
-<span class="required">Enter Seller Id:</span>
-<input type="number" name="Sid" placeholder="Enter Numeric Id" required="required" oninvalid="this.setCustomValidity('Please Enter Valid Id')" oninput="this.setCustomValidity('')"><br>
+<!-- <span class="required">Enter Seller Id:</span>
+<input type="number" name="Sid" placeholder="Enter Numeric Id" required="required" oninvalid="this.setCustomValidity('Please Enter Valid Id')" oninput="this.setCustomValidity('')"><br> -->
 <span class="required">Enter Seller Name:</span>
 <input type="text" name="Sname" placeholder="Enter Name" required="required" oninvalid="this.setCustomValidity('Please Enter Name')" oninput="this.setCustomValidity('')"><br>
 <span>Enter Seller Address:</span>

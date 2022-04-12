@@ -89,7 +89,7 @@ span {
 <h2>Enter Customer SignIN Details</h2>
 <p><span class="astric"> * </span>Marked fields are required</p>
 <form action="customersigninpageforward.jsp" method="POST">
-	<span class="required">Enter Id:</span><input placeholder="Enter Id" type="number" name="Cid" required="required" oninvalid="this.setCustomValidity('Please Enter Valid Id')" oninput="this.setCustomValidity('')">
+	<!-- <span class="required">Enter Id:</span><input placeholder="Enter Id" type="number" name="Cid" required="required" oninvalid="this.setCustomValidity('Please Enter Valid Id')" oninput="this.setCustomValidity('')"> -->
 	<span class="required">Enter E-mail:</span><input type="email" placeholder="Enter Your Email" placeholder="abc@example.com" name="Cemail" required="required" oninvalid="this.setCustomValidity('Please Enter Valid Email as abc@example.com')" oninput="this.setCustomValidity('')">
 	<span class="required">Enter Password:</span><input type="password" placeholder="Enter Your Password" name="Cpassword" required="required" oninvalid="this.setCustomValidity('Please Enter Valid Password')" oninput="this.setCustomValidity('')">
 					<input type="submit" value="LogIn">

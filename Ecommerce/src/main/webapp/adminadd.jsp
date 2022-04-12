@@ -98,8 +98,8 @@ font-weight: 200;
 	<h2>SignUp As Admin</h2>
 	<p><span class="astric"> * </span>Marked fields are required</p>
 	<form action="/addingAdmin">
-		<span class="required">Enter Admin Id:</span> 
-		<input type="text" name="Aid" placeholder="Enter Numeric Id" required="required" oninvalid="this.setCustomValidity('Please Enter Valid Id')" oninput="this.setCustomValidity('')"><br>
+		<!-- <span class="required">Enter Admin Id:</span> 
+		<input type="text" name="Aid" placeholder="Enter Numeric Id" required="required" oninvalid="this.setCustomValidity('Please Enter Valid Id')" oninput="this.setCustomValidity('')"><br> -->
 		<span class="required">Enter Admin Name:</span> 
 		<input type="text" name="Aname" placeholder="Enter Name" required="required" oninvalid="this.setCustomValidity('Please Enter Name')" oninput="this.setCustomValidity('')"><br>
 		<span>Enter Admin Address:</span> <input type="text" name="Aaddress" placeholder="Enter Address"><br> 
