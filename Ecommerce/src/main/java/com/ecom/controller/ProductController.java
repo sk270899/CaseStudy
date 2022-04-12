@@ -4,14 +4,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.ecom.dao.ProductDao;
 import com.ecom.entity.Product;
+import com.ecom.service.ProductService;
 
 @Controller
 public class ProductController {
 
 	@Autowired
-	ProductDao productdao;
+	ProductService productService;
 
 	@RequestMapping("/")
 	public String home() {
@@ -20,19 +20,19 @@ public class ProductController {
 
 	@RequestMapping("/addProduct")
 	public String addProduct(Product p) {
-		productdao.save(p);
+		productService.addProduct(p);
 		return "productdisplay.jsp";
 	}
 
 	@RequestMapping("/updateProduct")
 	public String updateProduct(Product p) {
-		productdao.save(p);
+		productService.addProduct(p);
 		return "productdisplay.jsp";
 	}
 
 	@RequestMapping("/deleteProduct")
 	public String deleteProduct(int id) {
-		productdao.deleteById(id);
+		productService.deleteProduct(id);
 		return "productdisplay.jsp";
 	}
 

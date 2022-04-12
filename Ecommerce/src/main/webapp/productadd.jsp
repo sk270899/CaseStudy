@@ -97,8 +97,8 @@ font-weight: 200;
 <h2>Add a New Product</h2>
 <p><span class="astric"> * </span>Marked fields are required</p>
 <form action="/addProduct">
-<span class="required">Enter Product Id:</span>
-<input type="number" name="Pid" placeholder="Enter Numeric Id" required="required" oninvalid="this.setCustomValidity('Please Enter Valid Id')" oninput="this.setCustomValidity('')"><br>
+<!-- <span class="required">Enter Product Id:</span>
+<input type="number" name="Pid" placeholder="Enter Numeric Id" required="required" oninvalid="this.setCustomValidity('Please Enter Valid Id')" oninput="this.setCustomValidity('')"><br> -->
 <span class="required">Enter Product Name:</span>
 <input type="text" name="Pname" placeholder="Enter Product Name" required="required" oninvalid="this.setCustomValidity('Please Enter Name')" oninput="this.setCustomValidity('')"><br>
 <span class="required">Enter Product Price:</span>

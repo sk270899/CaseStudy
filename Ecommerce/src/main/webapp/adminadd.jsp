@@ -107,7 +107,7 @@ font-weight: 200;
 		<input type="email" name="Aemail" placeholder="example@abc.com" required="required" oninvalid="this.setCustomValidity('Please Enter Valid Email as abc@example.com')" oninput="this.setCustomValidity('')"><br> 
 		<span class="required">Enter Admin Password:</span>
 		<input type="password" name="Apassword"
-			placeholder="Password must be 8 characters" required="required" oninvalid="this.setCustomValidity('Please Enter Password')" oninput="this.setCustomValidity('')"><br> 
+			placeholder="Password should contain at least one lowercase & uppercase letter, one special character ( !@#$%^&*()-+ ) & length > 8 & contains at least one digit" required="required" oninvalid="this.setCustomValidity('Please Enter Password')" oninput="this.setCustomValidity('')"><br> 
 		<span>Enter Admin Phone Number:</span> <input type="text" name="Ano"placeholder="Enter Phone Number"><br>
 		<input
 			type="submit" value="Submit">

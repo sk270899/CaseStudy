@@ -105,7 +105,7 @@ font-weight: 200;
 <span class="required">Enter Seller Email:</span>
 <input type="email" name="Semail" placeholder="example@abc.com" required="required" oninvalid="this.setCustomValidity('Please Enter Valid Email as abc@example.com')" oninput="this.setCustomValidity('')"><br>
 <span class="required">Enter Seller Password:</span>
-<input type="password" name="Spassword" placeholder="Password must be 8 characters" required="required" oninvalid="this.setCustomValidity('Please Enter Password')" oninput="this.setCustomValidity('')"><br>
+<input type="password" name="Spassword" placeholder="Password should contain at least one lowercase & uppercase letter, one special character ( !@#$%^&*()-+ ) & length > 8 & contains at least one digit" required="required" oninvalid="this.setCustomValidity('Please Enter Password')" oninput="this.setCustomValidity('')"><br>
 <span>Enter Seller Phone Number:</span>
 <input type="number" name="Sno" placeholder="Enter Phone Number"><br>
 <input type="submit" value="Add Seller">

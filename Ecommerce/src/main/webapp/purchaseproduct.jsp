@@ -37,7 +37,7 @@ Connection connection = null;
 Statement statement = null;
 ResultSet resultSet = null;
 String Pid = request.getParameter("Pid");
-System.out.println("order placed for order id : "+Pid);
+
 
 Class.forName("org.postgresql.Driver");
 connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
@@ -46,18 +46,23 @@ resultSet = statement.executeQuery("select Pid,Pname,Pprice,Pcategory from produ
 
 //cart object
 //Cart c = new Cart();
+while(resultSet.next()) {
+	System.out.println("order placed for order id : "+Pid + "\n");
+	System.out.println("product id : " + resultSet.getString(1));
+	System.out.println("product name : " + resultSet.getString(2));
+	System.out.println("product price : " + resultSet.getString(3));
+	System.out.println("product category : " + resultSet.getString(4));
+	response.sendRedirect("placeorder.jsp");
+}
 
 while(resultSet.next()) {
-	System.out.println(resultSet.getString(1));
-	System.out.println(resultSet.getString(2));
-	System.out.println(resultSet.getString(3));
-	System.out.println(resultSet.getString(4));
+	
 	
 	/* c.setOid(resultSet.getInt(1));
 	c.setOname(resultSet.getString(2));
 	c.setOprice(resultSet.getInt(3));
 	c.setOcategory(resultSet.getString(4)); */
-	response.sendRedirect("placeorder.jsp");
+	
 }
 %>
 <%while(resultSet.next()) {
